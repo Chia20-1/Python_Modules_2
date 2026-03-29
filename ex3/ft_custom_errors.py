@@ -31,8 +31,7 @@ def trigger_water_error() -> None:
 
 def test_custom_errors() -> None:
     print("=== Custom Garden Errors Demo ===")
-    print()
-    print("Testing PlantError...")
+    print("\nTesting PlantError...")
     try:
         trigger_plant_error()
     except PlantError as e:
@@ -45,11 +44,11 @@ def test_custom_errors() -> None:
     print("\nTesting catching all garden errors...")
     try:
         trigger_plant_error()
-    except PlantError as e:
+    except GardenError as e:
         print("Caught GardenError:", e)
     try:
         trigger_water_error()
-    except WaterError as e:
+    except GardenError as e:
         print("Caught GardenError:", e)
     print("\nAll custom error types work correctly!")
 

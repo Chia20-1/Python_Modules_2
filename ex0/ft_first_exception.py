@@ -15,6 +15,7 @@ def test_temperature() -> None:
         except ValueError as e:
             print("Caught input_temperature error:", e)
         print()
+    print("All tests completed - program didn't crash!")
 
 
 if __name__ == "__main__":
